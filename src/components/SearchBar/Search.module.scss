@@ -1,0 +1,24 @@
+@import "../../styling/varibles";
+
+.search_wrapper {
+    background-color: $white;
+    padding: 2rem 0;
+    .search {
+        display: block;
+        width: 50%;
+        padding: 1rem;
+        margin: 0 auto;
+        border: 1px solid $black;
+        border-radius: 3px;
+        font-size: 1.3rem;
+        caret-color: $blue;
+        &:focus {
+            outline: none;
+            border-color: $blue;
+            box-shadow: #00000013 0px 1px 1px inset, #007eff1a 0px 0px 0px 3px;
+        }
+        @media (max-width: 768px) {
+            width: 90%;
+        }
+    }
+}

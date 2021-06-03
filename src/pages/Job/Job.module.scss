@@ -1,0 +1,29 @@
+@import "../../styling/varibles";
+
+h1 {
+  min-height: 2.5rem;
+}
+.jobContainer {
+  display: flex;
+  .jobDetails {
+    width: 64%;
+    background-color: $white;
+    padding: 1% 2%;
+    margin: 0.5% 2% 0% 0%;
+  }
+  .jobSideList {
+    width: 30%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    .jobDetails {
+      width: 92%;
+      padding: 2%;
+      margin: 2%;
+    }
+    .jobSideList {
+      width: 100%;
+    }
+  }
+}

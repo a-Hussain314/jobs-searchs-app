@@ -1,0 +1,31 @@
+@import "../../styling/varibles";
+
+.RelatedInfoCard {
+    background-color: $primary-light;
+    padding: 1.25rem 1.5rem;
+    margin-block-end: 1rem;
+    border-radius: 0.25rem;
+    .title {
+        text-decoration: underline;
+        margin-top: 0rem;
+    }
+    .description {
+    }
+    .ListData {
+        list-style: none;
+        padding: 0rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        li{
+            width: 33%;
+        }
+        @media (max-width: 480px) {
+            flex-direction: column;
+            margin-bottom: 0rem;
+            li{
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}

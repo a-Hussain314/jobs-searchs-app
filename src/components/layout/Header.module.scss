@@ -1,0 +1,30 @@
+@import "../../styling/varibles";
+
+.header {
+    background-color: $white;
+    margin: 0 0 0.25rem 0;
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0px;
+        color: $blue;
+    }
+
+    .navLinks{
+        a {
+            font-size: 1.125rem;
+            margin: auto 1rem;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}

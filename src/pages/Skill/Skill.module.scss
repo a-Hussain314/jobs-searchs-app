@@ -1,0 +1,29 @@
+@import "../../styling/varibles";
+
+h1 {
+  min-height: 2.5rem;
+}
+.skillContainer {
+  display: flex;
+  .skillDetails {
+    width: 64%;
+    background-color: $white;
+    padding: 1% 2%;
+    margin: 0.5% 2% 0% 0%;
+  }
+  .skillSideList {
+    width: 30%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    .skillDetails {
+      width: 92%;
+      padding: 2%;
+      margin: 2%;
+    }
+    .skillSideList {
+      width: 100%;
+    }
+  }
+}

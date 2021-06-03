@@ -1,0 +1,29 @@
+@import "../../styling/varibles";
+
+.SideList {
+    width: 88%;
+    padding: 2% 2% 2% 6%;
+    margin: 2%;
+    background-color: $primary;
+    min-height: 60vh;
+    ul {
+        padding: 0 1.5rem;
+        li {
+            text-decoration: underline;
+            margin: 0 0 1rem 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 92%;
+        padding: 2%;
+        min-height: auto;
+        ul {
+            padding: 0 0 0 0;
+            li {
+                display: inline-block;
+                margin: 0 0.75rem 0.5rem 0;
+            }
+        }
+    }
+}

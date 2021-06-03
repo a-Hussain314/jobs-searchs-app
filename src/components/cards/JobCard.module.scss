@@ -1,0 +1,44 @@
+@import "../../styling/varibles";
+
+.JobCard {
+    width: 46%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1%;
+    padding: 1%;
+    background-color: $white;
+
+    @media (max-width: 991px) {
+        width: 92%;
+        margin: 2%;
+        padding: 2%;
+    }
+    h4 {
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin: 0 0 0.5rem 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+        li {
+            display: inline-block;
+            margin-block: 0.2rem;
+            margin-inline-end: 0.4rem;
+            background-color: $primary-dark;
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+    }
+    span {
+        a {
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}

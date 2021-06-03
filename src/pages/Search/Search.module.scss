@@ -1,0 +1,26 @@
+@import "../../styling/varibles";
+
+.Search{
+  .searchContainer{
+    display: flex;
+    .searchResults{
+      width: 70%;
+
+    }
+    .searchSideList{
+      width: 30%;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      .searchResults{
+        width: 100%;
+  
+      }
+      .searchSideList{
+        width: 100%;
+      }
+    }
+  }
+
+}
