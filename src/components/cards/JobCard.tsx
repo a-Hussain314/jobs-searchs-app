@@ -10,7 +10,7 @@ type props = {
     store: store
 }
 
-const JobCard: React.FC<props> = ({ job, GET_RELATED_SKILLS, store }) => {
+const JobCard: React.FC<props> = React.memo(({ job, GET_RELATED_SKILLS, store }) => {
     useEffect(() => {
         // don't refetch the job related skills, if it's previously fetched 
         if (!store.skills.byJobId[job.uuid]) {
@@ -48,7 +48,7 @@ const JobCard: React.FC<props> = ({ job, GET_RELATED_SKILLS, store }) => {
             <span><Link to={`/job/${job.uuid}`}>View Job details</Link></span>
         </div>
     )
-}
+})
 
 const mapStateToProps = (state: store) => {
     return { store: state };

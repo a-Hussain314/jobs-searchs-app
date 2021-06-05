@@ -3,9 +3,7 @@ import Header from './Header';
 
 const Layout: React.FC = () => {
     return (
-        <>
-            <Header />
-        </>
+        <Header />
     )
 }
 

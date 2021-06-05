@@ -8,15 +8,21 @@ type props = {
     history: any,
     location: any,
     GET_JOBS_SEARCH_RESULTS: (query: string) => void,
-    CLEAR_JOBS_SEARCH_RESULTS : () => void,
-    SET_SEARCH_LOADER: (bool:boolean) => void,
+    CLEAR_JOBS_SEARCH_RESULTS: () => void,
+    SET_SEARCH_LOADER: (bool: boolean) => void,
 }
 
-const SearchBar: React.FC<props> = ({ history, location, GET_JOBS_SEARCH_RESULTS, CLEAR_JOBS_SEARCH_RESULTS, SET_SEARCH_LOADER }) => {
+const SearchBar: React.FC<props> = ({
+    history,
+    location,
+    GET_JOBS_SEARCH_RESULTS,
+    CLEAR_JOBS_SEARCH_RESULTS,
+    SET_SEARCH_LOADER
+}) => {
+
     const [searchQuery, setSearchQuery] = useState<string>("");
     const [jobsAutocompleteList, setJobsAutocompleteList] = useState<suggestion[] | null>(null);
-
-    var timeId: React.MutableRefObject<number> = useRef(0);
+    let timeId: React.MutableRefObject<number> = useRef(0);
 
     const fetchSuggestions = useCallback((textFragment: string): void => {
         openSkillsApi.get(`/jobs/autocomplete?contains=${textFragment}`)

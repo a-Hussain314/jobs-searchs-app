@@ -8,6 +8,7 @@ type props = {
 }
 
 const SideList: React.FC<props> = ({ title, listItems }) => {
+   
     return (
         <>
             {listItems ?
